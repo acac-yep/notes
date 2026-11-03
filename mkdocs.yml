@@ -45,13 +45,37 @@ nav:
   - 考试速通:
       - exam/index.md
       - CS336 语言模型: exam/cs336.md
+      - 算法基础: exam/algorithms.md
+      - 计算机网络: exam/networking.md
+      - 编译原理:
+          - 00-学习路线与课程地图: exam/compiler/00-学习路线与课程地图.md
+          - 01-引论: exam/compiler/01-引论.md
+          - 02-词法分析: exam/compiler/02-词法分析.md
+          - 03-语法分析: exam/compiler/03-语法分析.md
+          - 04-语法制导翻译: exam/compiler/04-语法制导翻译.md
+          - 05-类型检查: exam/compiler/05-类型检查.md
+          - 06-运行时存储空间的组织和管理: exam/compiler/06-运行时存储空间的组织和管理.md
+          - 07-中间代码生成: exam/compiler/07-中间代码生成.md
+          - 08-代码生成: exam/compiler/08-代码生成.md
+          - 09-独立于机器的优化: exam/compiler/09-独立于机器的优化.md
+          - 10-依赖于机器的优化: exam/compiler/10-依赖于机器的优化.md
+          - 11-编译系统和运行时系统: exam/compiler/11-编译系统和运行时系统.md
+          - 12-面向对象语言的编译: exam/compiler/12-面向对象语言的编译.md
+          - 13-函数式语言的编译: exam/compiler/13-函数式语言的编译.md
+          - 99-考前总复习: exam/compiler/99-考前总复习.md
   - 论文笔记:
       - papers/index.md
       - 推荐系统:
           - papers/recsys/index.md
-          - AgentX（2606.26859）: papers/recsys/2606.26859-agentx.md
-          - NOVA（2606.27243）: papers/recsys/2606.27243-nova.md
-          - Astar（2608.27287）: papers/recsys/2608.27287-astar.md
+          - 2602.10226-self-evolving-youtube: papers/recsys/2602.10226-self-evolving-youtube.md
+          - 2602.12612-self-evolverec: papers/recsys/2602.12612-self-evolverec.md
+          - 2606.26859-agentx: papers/recsys/2606.26859-agentx.md
+          - 2606.27243-nova: papers/recsys/2606.27243-nova.md
+          - 2606.28368-evorec: papers/recsys/2606.28368-evorec.md
+          - 2607.29241-recharness: papers/recsys/2607.29241-recharness.md
+          - 2608.27287-astar: papers/recsys/2608.27287-astar.md
+          - 2609.10922-auto-recsys: papers/recsys/2609.10922-auto-recsys.md
+          - 2609.30001-agentx-model: papers/recsys/2609.30001-agentx-model.md
   - 关于: about.md
 
 plugins:
