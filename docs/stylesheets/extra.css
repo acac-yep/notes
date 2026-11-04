@@ -30,3 +30,24 @@
     max-width: 78rem;
   }
 }
+
+/* mermaid mindmap：根节点是深色圆，文字默认黑色看不清（标签是 foreignObject 里的 div） */
+.md-typeset .diagram svg .section-root foreignObject div,
+.md-typeset .diagram svg .section-root text,
+.md-typeset .diagram svg .section-root tspan {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* mindmap / flowchart 容器居中 */
+.md-typeset pre.diagram,
+.md-typeset div.diagram {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.md-typeset .diagram svg {
+  max-width: 100%;
+  height: auto;
+}
