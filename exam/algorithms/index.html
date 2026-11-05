@@ -1,0 +1,6769 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="考试速通资料与论文精读笔记">
+      
+      
+        <meta name="author" content="王子涵">
+      
+      
+        <link rel="canonical" href="https://acac-yep.github.io/notes/exam/algorithms/">
+      
+      
+        <link rel="prev" href="../cs336/">
+      
+      
+        <link rel="next" href="../networking/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>算法基础 - 学习资料库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="学习资料库" class="md-header__button md-logo" aria-label="学习资料库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            学习资料库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              算法基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/acac-yep/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    acac-yep/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  考试速通
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  论文笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="学习资料库" class="md-nav__button md-logo" aria-label="学习资料库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+
+    </a>
+    学习资料库
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/acac-yep/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    acac-yep/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    考试速通
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    考试速通
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs336/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS336 语言模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    算法基础
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    算法基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. 一页总览：这门课到底在学什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 基本概念：算法、正确性与分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 基本概念：算法、正确性与分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 什么是排序问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 正确性比速度更优先
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 循环不变量：证明迭代算法正确的标准模板
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 循环不变量：证明迭代算法正确的标准模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化 Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        保持 Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        终止 Termination
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 输入规模和成本模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 最坏、平均、最好和期望情况
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 最坏、平均、最好和期望情况">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最坏情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最好情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平均情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        期望复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 渐进分析的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-oomegatheta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 渐进记号：O、Omega、Theta 以及比较函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 渐进记号：O、Omega、Theta 以及比较函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 三个最重要的记号
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 三个最重要的记号">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ogn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O(g(n))：渐进上界
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omegagn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Omega(g(n))：渐进下界
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thetagn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theta(g(n))：渐进紧确界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-o-omega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 小写 o 和 omega
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 常用运算性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 复杂度比较的常见结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 常用求和
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 常用求和">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等差型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调和和
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 向下取整和向上取整
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 递归式与分治
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 递归式与分治">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 分治的三步
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-substitution-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 代入法 Substitution Method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 代入法 Substitution Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tn-4tn2-n-on2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例：证明 T(n) = 4T(n/2) + n = O(n^2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recursion-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 递归树法 Recursion Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 递归树法 Recursion Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tn-2tn2-cn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典例子：T(n) = 2T(n/2) + cn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Master Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Master Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1：递归子问题总成本更大
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2：两者同阶
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3：当前层成本更大
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Master Theorem 不适用的情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 分治的代表：归并排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 分治的代表：归并排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        合并的核心
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递归式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 排序的基本指标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 排序的基本指标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-stable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 稳定性 Stable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-in-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 原地 In-place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 比较次数和移动次数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 简单排序算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 简单排序算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-insertion-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 插入排序 Insertion Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 插入排序 Insertion Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正确性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平均情况的理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 选择排序 Selection Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 选择排序 Selection Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度和特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何改成稳定选择排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-bubble-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 冒泡排序 Bubble Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 冒泡排序 Bubble Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度和特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-shellsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 希尔排序 Shellsort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 希尔排序 Shellsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 高效比较排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 高效比较排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 堆的基本结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 堆的基本结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大堆
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小堆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-max-heapify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 MAX-HEAPIFY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-build-max-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 BUILD-MAX-HEAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-heapsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 堆排序 Heapsort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 堆排序 Heapsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优先队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-quicksort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 快速排序 Quicksort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 快速排序 Quicksort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTITION 的核心不变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        随机化快速排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 比较排序的下界
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 比较排序的下界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 为什么比较排序不能普遍做到线性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 决策树模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 线性排序为什么不矛盾
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 线性时间排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 线性时间排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-counting-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 计数排序 Counting Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 计数排序 Counting Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么必须从右向左放
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-radix-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 基数排序 Radix Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 基数排序 Radix Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么内层排序必须稳定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择每轮处理多少位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bucket-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 桶排序 Bucket Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 桶排序 Bucket Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 线性排序怎么选
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 顺序统计量与选择问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 顺序统计量与选择问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 最小值和最大值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 同时找最小值和最大值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-randomized-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 随机化选择 RANDOMIZED-SELECT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 随机化选择 RANDOMIZED-SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么比快速排序快
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-median-of-medians" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 最坏线性选择：Median of Medians
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.5 最坏线性选择：Median of Medians">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五分组算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么 pivot 足够好
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 一张总表：排序算法怎么比较
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 一张总表：排序算法怎么比较">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速选择口诀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 复杂度分析的做题模板
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 复杂度分析的做题模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 循环题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1 循环题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单层循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        嵌套循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每次翻倍或减半
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 递归题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 正确性题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 选择排序算法题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 讲义中的应用型复杂度例子：Self-Attention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 高频易错点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. 高频易错点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 1：把 O 当成“等于"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 2：平均情况不等于把最好和最坏平均
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-build-heap-on-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 3：把 Build-Heap 误算成 O(n log n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 4：基数排序的内层排序不一定随便
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 5：桶排序的线性时间不是无条件的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-n-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 6：快速排序平均 n log n 不代表最坏也是
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 7：选择问题不需要完整排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 8：稳定性不能只看是否交换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 9：Master Theorem 不是所有递归式都能套
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 10：只写结论不写理由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 最后背诵清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. 最后背诵清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背证明套路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一句话理解整门课
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：资料对应关系
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编译原理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    编译原理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/00-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E8%AF%BE%E7%A8%8B%E5%9C%B0%E5%9B%BE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00-学习路线与课程地图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/01-%E5%BC%95%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01-引论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/02-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02-词法分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/03-%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03-语法分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/04-%E8%AF%AD%E6%B3%95%E5%88%B6%E5%AF%BC%E7%BF%BB%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04-语法制导翻译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/05-%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05-类型检查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/06-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%84%E7%BB%87%E5%92%8C%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06-运行时存储空间的组织和管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/07-%E4%B8%AD%E9%97%B4%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07-中间代码生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/08-%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08-代码生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/09-%E7%8B%AC%E7%AB%8B%E4%BA%8E%E6%9C%BA%E5%99%A8%E7%9A%84%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09-独立于机器的优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/10-%E4%BE%9D%E8%B5%96%E4%BA%8E%E6%9C%BA%E5%99%A8%E7%9A%84%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10-依赖于机器的优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/11-%E7%BC%96%E8%AF%91%E7%B3%BB%E7%BB%9F%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11-编译系统和运行时系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/12-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12-面向对象语言的编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/13-%E5%87%BD%E6%95%B0%E5%BC%8F%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13-函数式语言的编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compiler/99-%E8%80%83%E5%89%8D%E6%80%BB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    99-考前总复习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文笔记
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    论文笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/recsys/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推荐系统
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    推荐系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2602.10226-self-evolving-youtube/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2602.10226-self-evolving-youtube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2602.12612-self-evolverec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2602.12612-self-evolverec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2606.26859-agentx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2606.26859-agentx
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2606.27243-nova/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2606.27243-nova
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2606.28368-evorec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2606.28368-evorec
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2607.29241-recharness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2607.29241-recharness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2608.27287-astar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2608.27287-astar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2609.10922-auto-recsys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2609.10922-auto-recsys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/recsys/2609.30001-agentx-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2609.30001-agentx-model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. 一页总览：这门课到底在学什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 基本概念：算法、正确性与分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 基本概念：算法、正确性与分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 什么是排序问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 正确性比速度更优先
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 循环不变量：证明迭代算法正确的标准模板
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 循环不变量：证明迭代算法正确的标准模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始化 Initialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        保持 Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        终止 Termination
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 输入规模和成本模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 最坏、平均、最好和期望情况
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 最坏、平均、最好和期望情况">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最坏情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最好情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平均情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        期望复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 渐进分析的核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-oomegatheta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 渐进记号：O、Omega、Theta 以及比较函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 渐进记号：O、Omega、Theta 以及比较函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 三个最重要的记号
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 三个最重要的记号">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ogn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O(g(n))：渐进上界
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omegagn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Omega(g(n))：渐进下界
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thetagn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theta(g(n))：渐进紧确界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-o-omega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 小写 o 和 omega
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 常用运算性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 复杂度比较的常见结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 常用求和
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 常用求和">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等差型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调和和
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 向下取整和向上取整
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 递归式与分治
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 递归式与分治">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 分治的三步
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-substitution-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 代入法 Substitution Method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 代入法 Substitution Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tn-4tn2-n-on2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例：证明 T(n) = 4T(n/2) + n = O(n^2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recursion-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 递归树法 Recursion Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 递归树法 Recursion Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tn-2tn2-cn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典例子：T(n) = 2T(n/2) + cn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Master Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Master Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1：递归子问题总成本更大
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2：两者同阶
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3：当前层成本更大
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Master Theorem 不适用的情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 分治的代表：归并排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 分治的代表：归并排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        合并的核心
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递归式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 排序的基本指标
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 排序的基本指标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-stable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 稳定性 Stable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-in-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 原地 In-place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 比较次数和移动次数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 简单排序算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 简单排序算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-insertion-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 插入排序 Insertion Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 插入排序 Insertion Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正确性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平均情况的理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 选择排序 Selection Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 选择排序 Selection Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度和特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何改成稳定选择排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-bubble-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 冒泡排序 Bubble Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 冒泡排序 Bubble Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度和特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-shellsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 希尔排序 Shellsort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 希尔排序 Shellsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 高效比较排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 高效比较排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 堆的基本结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 堆的基本结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大堆
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小堆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-max-heapify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 MAX-HEAPIFY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-build-max-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 BUILD-MAX-HEAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-heapsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 堆排序 Heapsort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 堆排序 Heapsort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优先队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-quicksort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 快速排序 Quicksort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 快速排序 Quicksort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTITION 的核心不变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        随机化快速排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 比较排序的下界
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 比较排序的下界">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 为什么比较排序不能普遍做到线性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 决策树模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 线性排序为什么不矛盾
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 线性时间排序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 线性时间排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-counting-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 计数排序 Counting Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 计数排序 Counting Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么必须从右向左放
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-radix-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 基数排序 Radix Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 基数排序 Radix Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么内层排序必须稳定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择每轮处理多少位
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bucket-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 桶排序 Bucket Sort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 桶排序 Bucket Sort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        伪代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 线性排序怎么选
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 顺序统计量与选择问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 顺序统计量与选择问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 最小值和最大值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 同时找最小值和最大值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-randomized-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4 随机化选择 RANDOMIZED-SELECT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 随机化选择 RANDOMIZED-SELECT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么比快速排序快
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-median-of-medians" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5 最坏线性选择：Median of Medians
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.5 最坏线性选择：Median of Medians">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五分组算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么 pivot 足够好
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 一张总表：排序算法怎么比较
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 一张总表：排序算法怎么比较">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速选择口诀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 复杂度分析的做题模板
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 复杂度分析的做题模板">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 循环题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1 循环题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单层循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        嵌套循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每次翻倍或减半
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 递归题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 正确性题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 选择排序算法题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-self-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 讲义中的应用型复杂度例子：Self-Attention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 高频易错点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. 高频易错点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 1：把 O 当成“等于"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 2：平均情况不等于把最好和最坏平均
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-build-heap-on-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 3：把 Build-Heap 误算成 O(n log n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 4：基数排序的内层排序不一定随便
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 5：桶排序的线性时间不是无条件的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-n-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 6：快速排序平均 n log n 不代表最坏也是
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 7：选择问题不需要完整排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 8：稳定性不能只看是否交换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9master-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 9：Master Theorem 不是所有递归式都能套
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        易错点 10：只写结论不写理由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 最后背诵清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. 最后背诵清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必背证明套路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一句话理解整门课
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附：资料对应关系
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">算法基础速通笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>目标</strong>：只阅读本文件，建立对当前这几份讲义所覆盖内容的完整知识框架，并能够独立完成常见的复杂度分析、递归式求解、排序算法比较、线性时间排序和顺序统计量题目。</p>
+<p><strong>整理范围</strong>：课程 Topic 0、Topic 1、Topic 2、Topic 3、Topic 4.1、Topic 4.2，以及《Introduction to Algorithms》第 3 版中第 1--9 章与上述主题直接相关的内容。</p>
+<p><strong>学习顺序</strong>：先看“总览与结论”，再看算法模板和证明套路，最后做文末的自测清单。文中的伪代码统一采用教材常见的 <strong>1 下标</strong>写法。</p>
+</blockquote>
+<hr />
+<h2 id="0">0. 一页总览：这门课到底在学什么<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
+<p>算法基础的核心不是背一堆算法，而是掌握下面四件事：</p>
+<ol>
+<li><strong>把问题说清楚</strong>：输入是什么，输出是什么，约束是什么。</li>
+<li><strong>设计一个可执行的过程</strong>：算法每一步做什么，为什么能得到正确答案。</li>
+<li><strong>证明它确实正确</strong>：循环不变量、归纳法、分治结构、概率分析。</li>
+<li><strong>分析资源消耗</strong>：时间复杂度、空间复杂度、最坏情况、平均情况和期望复杂度。</li>
+</ol>
+<p>整门课的主线可以压缩成：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>问题建模
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   -&gt; 正确性
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   -&gt; 复杂度
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   -&gt; 选择合适的算法范式
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   -&gt; 根据数据特征和约束做取舍
+</code></pre></div>
+<p>当前材料重点覆盖的知识链：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>基本算法分析
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  -&gt; 渐进记号
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  -&gt; 分治与递归式
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  -&gt; 比较排序
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  -&gt; 比较排序下界
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  -&gt; 利用输入结构突破 n log n
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  -&gt; 顺序统计量与选择
+</code></pre></div>
+<p>最重要的复杂度阶从快到慢大致是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n) &lt; O(n!)
+</code></pre></div>
+<p>当 <code>n</code> 足够大时，低阶复杂度通常更重要。但真实选择还要看：</p>
+<ul>
+<li>是否需要稳定排序；</li>
+<li>是否允许额外空间；</li>
+<li>输入值是否有范围、位数或分布假设；</li>
+<li>是否要求最坏情况保证；</li>
+<li>常数、缓存、I/O 和实现复杂度是否重要。</li>
+</ul>
+<hr />
+<h2 id="1">1. 基本概念：算法、正确性与分析<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 什么是排序问题<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>给定长度为 <code>n</code> 的序列：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>A = &lt;a1, a2, ..., an&gt;
+</code></pre></div>
+<p>输出它的一个排列：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;a'1, a'2, ..., a'n&gt;
+</code></pre></div>
+<p>使得：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>a'1 &lt;= a'2 &lt;= ... &lt;= a'n
+</code></pre></div>
+<p>注意“输出是输入的排列”意味着：</p>
+<ul>
+<li>元素不能凭空增加或消失；</li>
+<li>相同键对应的记录仍然都要保留；</li>
+<li>如果元素是记录，排序通常只比较某个 <code>key</code>，而不是整个记录。</li>
+</ul>
+<h3 id="12">1.2 正确性比速度更优先<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>算法分析不仅关注运行时间，还关注：</p>
+<ul>
+<li><strong>correctness</strong>：输出满足问题定义；</li>
+<li><strong>functionality</strong>：功能完整；</li>
+<li><strong>reliability / robustness</strong>：异常输入下行为合理；</li>
+<li><strong>modularity / maintainability</strong>：容易理解和修改；</li>
+<li><strong>simplicity</strong>：不引入不必要的复杂性。</li>
+</ul>
+<p>一个更快但不正确的算法没有意义。做题时建议按以下顺序写：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>先说明算法做什么
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>再说明为什么正确
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>最后分析复杂度
+</code></pre></div>
+<h3 id="13">1.3 循环不变量：证明迭代算法正确的标准模板<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>循环不变量是一个在循环过程中始终保持为真的命题。标准证明分三步：</p>
+<h4 id="initialization">初始化 Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h4>
+<p>第一次循环开始前，不变量成立。</p>
+<h4 id="maintenance">保持 Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h4>
+<p>假设某次循环开始前不变量成立，证明执行一次循环后，下一次循环开始前仍成立。</p>
+<h4 id="termination">终止 Termination<a class="headerlink" href="#termination" title="Permanent link">&para;</a></h4>
+<p>循环结束时，不变量和终止条件共同推出算法满足目标。</p>
+<p>记忆方式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>初始化：一开始对不对？
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>保持：做一步之后还对不对？
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>终止：结束时这个性质能不能直接推出答案？
+</code></pre></div>
+<p><strong>插入排序的典型不变量</strong>：在外层循环处理下标 <code>j</code> 时，子数组 <code>A[1..j-1]</code> 已经有序，并且包含原来这部分的所有元素。</p>
+<h3 id="14">1.4 输入规模和成本模型<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>算法的运行时间应写成输入规模 <code>n</code> 的函数 <code>T(n)</code>。这里的 <code>n</code> 不一定是数组长度，必须根据问题定义选择合适的规模，例如：</p>
+<ul>
+<li>数组问题：元素个数；</li>
+<li>图问题：顶点数 <code>V</code> 和边数 <code>E</code>；</li>
+<li>大整数问题：二进制位数；</li>
+<li>矩阵问题：行数、列数或元素总数。</li>
+</ul>
+<p>通常先采用 RAM 模型，认为以下基本操作耗时 <code>O(1)</code>：</p>
+<ul>
+<li>加减乘除；</li>
+<li>读写数组元素；</li>
+<li>赋值、比较、分支、函数调用。</li>
+</ul>
+<p>这是一个抽象模型，重点是比较算法随规模增长的速度，而不是绑定某一台机器的绝对秒数。</p>
+<h3 id="15">1.5 最坏、平均、最好和期望情况<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<h4 id="_2">最坏情况<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>T_worst(n) = 所有规模为 n 的输入中，运行时间的最大值
+</code></pre></div>
+<p>最常用，因为它给出确定性保证。</p>
+<h4 id="_3">最好情况<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>T_best(n) = 所有规模为 n 的输入中，运行时间的最小值
+</code></pre></div>
+<p>只看最好情况通常没有指导意义，因为它可能掩盖算法在一般输入上的糟糕表现。</p>
+<h4 id="_4">平均情况<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>需要先指定输入分布，再计算所有输入上的平均运行时间。没有输入分布，“平均复杂度”通常没有定义。</p>
+<h4 id="_5">期望复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>随机算法中，对算法内部随机选择取期望。随机快速选择的期望线性时间就是这种分析。</p>
+<h3 id="16">1.6 渐进分析的核心思想<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<p>当 <code>n -&gt; infinity</code> 时，忽略：</p>
+<ul>
+<li>机器相关的常数；</li>
+<li>低阶项；</li>
+<li>对增长速度没有影响的常数因子。</li>
+</ul>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>3n^3 + 90n^2 - 5n + 2006 = Theta(n^3)
+</code></pre></div>
+<p>渐进分析的结论不是“所有情况下都更快”，而是“当规模足够大时，增长速度更慢”。小规模时，常数和实现细节可能改变实际表现。</p>
+<hr />
+<h2 id="2-oomegatheta">2. 渐进记号：O、Omega、Theta 以及比较函数<a class="headerlink" href="#2-oomegatheta" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 三个最重要的记号<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h4 id="ogn"><code>O(g(n))</code>：渐进上界<a class="headerlink" href="#ogn" title="Permanent link">&para;</a></h4>
+<p>若存在常数 <code>c &gt; 0</code> 和 <code>n0 &gt; 0</code>，使得当 <code>n &gt;= n0</code> 时：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>0 &lt;= f(n) &lt;= c g(n)
+</code></pre></div>
+<p>则称：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>f(n) = O(g(n))
+</code></pre></div>
+<p>直觉：<code>f</code> 的增长速度不超过 <code>g</code> 的常数倍。</p>
+<p>注意：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>n = O(n^2)
+</code></pre></div>
+<p>是正确的，但不够紧；如果能证明 <code>Theta(n)</code>，就不要只写 <code>O(n^2)</code>。</p>
+<h4 id="omegagn"><code>Omega(g(n))</code>：渐进下界<a class="headerlink" href="#omegagn" title="Permanent link">&para;</a></h4>
+<p>若存在常数 <code>c &gt; 0</code> 和 <code>n0 &gt; 0</code>，使得当 <code>n &gt;= n0</code> 时：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>0 &lt;= c g(n) &lt;= f(n)
+</code></pre></div>
+<p>则称：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>f(n) = Omega(g(n))
+</code></pre></div>
+<p>直觉：<code>f</code> 至少和 <code>g</code> 一样快地增长。</p>
+<h4 id="thetagn"><code>Theta(g(n))</code>：渐进紧确界<a class="headerlink" href="#thetagn" title="Permanent link">&para;</a></h4>
+<p>若同时有：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>f(n) = O(g(n))
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>f(n) = Omega(g(n))
+</code></pre></div>
+<p>则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>f(n) = Theta(g(n))
+</code></pre></div>
+<p>形式化地说，存在正常数 <code>c1, c2, n0</code>，使得：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>0 &lt;= c1 g(n) &lt;= f(n) &lt;= c2 g(n),  n &gt;= n0
+</code></pre></div>
+<h3 id="22-o-omega">2.2 小写 <code>o</code> 和 <code>omega</code><a class="headerlink" href="#22-o-omega" title="Permanent link">&para;</a></h3>
+<p>它们表示严格的增长关系：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>f(n) = o(g(n))      表示 f 比 g 增长严格更慢
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>f(n) = omega(g(n))  表示 f 比 g 增长严格更快
+</code></pre></div>
+<p>常用极限判定：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>lim f(n)/g(n) = 0       =&gt; f(n) = o(g(n))
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>lim f(n)/g(n) = infinity =&gt; f(n) = omega(g(n))
+</code></pre></div>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>log^k n = o(n^epsilon)       任意常数 k，epsilon &gt; 0
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>n^b = o(a^n)                 任意 a &gt; 1，任意常数 b
+</code></pre></div>
+<h3 id="23">2.3 常用运算性质<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>如果 <code>f = Theta(g)</code> 且 <code>g = Theta(h)</code>，那么：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>f = Theta(h)
+</code></pre></div>
+<p>如果：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>f = O(g),  g = O(h)
+</code></pre></div>
+<p>那么：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>f = O(h)
+</code></pre></div>
+<p>常用“取主项”规则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Theta(f(n) + g(n)) = Theta(max(f(n), g(n)))
+</code></pre></div>
+<p>前提是 <code>f</code>、<code>g</code> 最终非负。</p>
+<h3 id="24">2.4 复杂度比较的常见结论<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>记住以下增长顺序：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>1
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>log n
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>sqrt(n)
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>n
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>n log n
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>n^2
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>n^3
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>2^n
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>n!
+</code></pre></div>
+<p>常用技巧：</p>
+<ul>
+<li>对数底数只差常数：<code>log_a n = Theta(log_b n)</code>；</li>
+<li>多项式中只看最高次项：<code>n^3 + n^2 + n = Theta(n^3)</code>；</li>
+<li>指数最终超过任何多项式：<code>n^100 = o(2^n)</code>；</li>
+<li>阶乘最终超过任何固定底数的指数：<code>2^n = o(n!)</code>；</li>
+<li><code>log log n</code> 比 <code>log n</code> 慢；</li>
+<li><code>n log n</code> 比 <code>n^2</code> 慢。</li>
+</ul>
+<h3 id="25">2.5 常用求和<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<h4 id="_6">等差型<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>1 + 2 + ... + n = n(n+1)/2 = Theta(n^2)
+</code></pre></div>
+<h4 id="_7">几何型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>1 + x + x^2 + ... + x^k = (1 - x^(k+1))/(1-x), x != 1
+</code></pre></div>
+<p>若 <code>|x| &lt; 1</code>，无限和是常数：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>1 + x + x^2 + ... = 1/(1-x) = Theta(1)
+</code></pre></div>
+<h4 id="_8">调和和<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>1 + 1/2 + 1/3 + ... + 1/n = Theta(log n)
+</code></pre></div>
+<h3 id="26">2.6 向下取整和向上取整<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
+<p>对复杂度通常不影响阶：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>floor(n/2) = Theta(n)
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>ceil(n/2) = Theta(n)
+</code></pre></div>
+<p>但写递归式时必须意识到：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>T(n) = T(floor(n/2)) + T(ceil(n/2)) + Theta(n)
+</code></pre></div>
+<p>和简化式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>T(n) = 2T(n/2) + Theta(n)
+</code></pre></div>
+<p>通常有相同渐进解。</p>
+<hr />
+<h2 id="3">3. 递归式与分治<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 分治的三步<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>分治算法把一个大问题拆成相同类型的更小问题：</p>
+<ol>
+<li><strong>Divide</strong>：把规模为 <code>n</code> 的问题拆成若干子问题；</li>
+<li><strong>Conquer</strong>：递归解决子问题；</li>
+<li><strong>Combine</strong>：合并子问题的解。</li>
+</ol>
+<p>一般递归式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>T(n) = a T(n/b) + f(n)
+</code></pre></div>
+<p>其中：</p>
+<ul>
+<li><code>a</code>：子问题个数；</li>
+<li><code>n/b</code>：每个子问题的规模；</li>
+<li><code>f(n)</code>：当前层的拆分和合并成本。</li>
+</ul>
+<p>递归式要写清楚边界：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>T(n) = Theta(1),                     n &lt;= n0
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>T(n) = a T(n/b) + f(n),              n &gt; n0
+</code></pre></div>
+<h3 id="32-substitution-method">3.2 代入法 Substitution Method<a class="headerlink" href="#32-substitution-method" title="Permanent link">&para;</a></h3>
+<p>适用场景：你大致知道答案长什么样，需要严格证明。</p>
+<p>三步：</p>
+<ol>
+<li><strong>猜形式</strong>：例如猜 <code>T(n) = O(n log n)</code>；</li>
+<li><strong>归纳代入</strong>：假设所有更小规模满足猜想，代入递归式；</li>
+<li><strong>处理常数和初始条件</strong>：选合适的常数，验证基例。</li>
+</ol>
+<h4 id="tn-4tn2-n-on2">例：证明 <code>T(n) = 4T(n/2) + n = O(n^2)</code><a class="headerlink" href="#tn-4tn2-n-on2" title="Permanent link">&para;</a></h4>
+<p>直接假设 <code>T(k) &lt;= c k^2</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>T(n)
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>&lt;= 4c(n/2)^2 + n
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>= c n^2 + n
+</code></pre></div>
+<p>这里多出了 <code>+n</code>，无法直接推出 <code>&lt;= c n^2</code>。怎么办？</p>
+<p><strong>加强归纳假设</strong>，减掉一个低阶项：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>T(k) &lt;= c1 k^2 - c2 k
+</code></pre></div>
+<p>则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>T(n)
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>&lt;= 4(c1(n/2)^2 - c2(n/2)) + n
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>= c1 n^2 - 2c2 n + n
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>= c1 n^2 - c2 n - (c2 n - n)
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>&lt;= c1 n^2 - c2 n       当 c2 &gt;= 1
+</code></pre></div>
+<p>这说明：代入法最容易出错的地方，是只写出“数量级相同”，却没有真正证明归纳假设成立。</p>
+<h3 id="33-recursion-tree">3.3 递归树法 Recursion Tree<a class="headerlink" href="#33-recursion-tree" title="Permanent link">&para;</a></h3>
+<p>步骤：</p>
+<ol>
+<li>画出每层子问题的规模；</li>
+<li>计算每层总成本；</li>
+<li>计算树高；</li>
+<li>对各层求和。</li>
+</ol>
+<h4 id="tn-2tn2-cn">经典例子：<code>T(n) = 2T(n/2) + cn</code><a class="headerlink" href="#tn-2tn2-cn" title="Permanent link">&para;</a></h4>
+<p>每层的总成本都是 <code>cn</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>第 0 层：cn
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>第 1 层：2 * c(n/2) = cn
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>第 2 层：4 * c(n/4) = cn
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>...
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>叶子层：n * c = cn
+</code></pre></div>
+<p>树高为 <code>log_2 n</code>，层数为 <code>log_2 n + 1</code>，因此：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>T(n) = cn(log n + 1) = Theta(n log n)
+</code></pre></div>
+<h3 id="34-master-theorem">3.4 Master Theorem<a class="headerlink" href="#34-master-theorem" title="Permanent link">&para;</a></h3>
+<p>针对：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>T(n) = aT(n/b) + f(n)
+</code></pre></div>
+<p>先计算临界函数：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>n^(log_b a)
+</code></pre></div>
+<p>再把 <code>f(n)</code> 和它比较。</p>
+<h4 id="case-1">Case 1：递归子问题总成本更大<a class="headerlink" href="#case-1" title="Permanent link">&para;</a></h4>
+<p>若存在常数 <code>epsilon &gt; 0</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>f(n) = O(n^(log_b a - epsilon))
+</code></pre></div>
+<p>则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>T(n) = Theta(n^(log_b a))
+</code></pre></div>
+<p>例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>T(n) = 4T(n/2) + n
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>a = 4, b = 2, n^(log_b a) = n^2
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>f(n) = n = O(n^(2-1))
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>=&gt; T(n) = Theta(n^2)
+</code></pre></div>
+<h4 id="case-2">Case 2：两者同阶<a class="headerlink" href="#case-2" title="Permanent link">&para;</a></h4>
+<p>若对某个常数 <code>k &gt;= 0</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>f(n) = Theta(n^(log_b a) log^k n)
+</code></pre></div>
+<p>则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>T(n) = Theta(n^(log_b a) log^(k+1) n)
+</code></pre></div>
+<p>例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>T(n) = 4T(n/2) + n^2
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>=&gt; T(n) = Theta(n^2 log n)
+</code></pre></div>
+<h4 id="case-3">Case 3：当前层成本更大<a class="headerlink" href="#case-3" title="Permanent link">&para;</a></h4>
+<p>若存在 <code>epsilon &gt; 0</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>f(n) = Omega(n^(log_b a + epsilon))
+</code></pre></div>
+<p>并满足正则条件：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>a f(n/b) &lt;= c f(n),  某个常数 c &lt; 1
+</code></pre></div>
+<p>则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>T(n) = Theta(f(n))
+</code></pre></div>
+<p>例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>T(n) = 4T(n/2) + n^3
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>=&gt; T(n) = Theta(n^3)
+</code></pre></div>
+<h3 id="35-master-theorem">3.5 Master Theorem 不适用的情况<a class="headerlink" href="#35-master-theorem" title="Permanent link">&para;</a></h3>
+<p>它不是万能公式。比如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>T(n) = 4T(n/2) + n^2/log n
+</code></pre></div>
+<p>这里 <code>f(n)</code> 比 <code>n^2</code> 略小，但不是小一个固定的多项式因子，因此不能直接套标准三种情况。此时用递归树、代入法或更一般的定理。</p>
+<h3 id="36">3.6 分治的代表：归并排序<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<h4 id="_9">思想<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ol>
+<li>把数组分成左右两半；</li>
+<li>递归排序左右两半；</li>
+<li>在线性时间内合并两个有序数组。</li>
+</ol>
+<h4 id="_10">合并的核心<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>维护两个有序部分的当前最小元素，谁小就把谁放入输出数组。两个数组中的每个元素最多被看一次，所以合并成本是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>Theta(n)
+</code></pre></div>
+<h4 id="_11">伪代码<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>MERGE-SORT(A, p, r)
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    if p &lt; r
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>        q = floor((p + r) / 2)
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>        MERGE-SORT(A, p, q)
+<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a>        MERGE-SORT(A, q + 1, r)
+<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a>        MERGE(A, p, q, r)
+</code></pre></div>
+<h4 id="_12">递归式<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>T(1) = Theta(1)
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>T(n) = 2T(n/2) + Theta(n)
+</code></pre></div>
+<p>由 Master Theorem Case 2 或递归树：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>T(n) = Theta(n log n)
+</code></pre></div>
+<h4 id="_13">特点<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>最好、平均、最坏都是 <code>Theta(n log n)</code>；</li>
+<li>稳定，前提是合并时相等元素优先取左边；</li>
+<li>经典数组实现需要 <code>Theta(n)</code> 辅助空间；</li>
+<li>适合外部排序和需要稳定性的场景。</li>
+</ul>
+<hr />
+<h2 id="4">4. 排序的基本指标<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41-stable">4.1 稳定性 Stable<a class="headerlink" href="#41-stable" title="Permanent link">&para;</a></h3>
+<p>若两个记录的排序键相等，排序后它们仍保持原来的相对顺序，则排序稳定。</p>
+<p>例如有记录：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>(2, A), (2, B), (1, C)
+</code></pre></div>
+<p>稳定排序后必须是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>(1, C), (2, A), (2, B)
+</code></pre></div>
+<p>而：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>(1, C), (2, B), (2, A)
+</code></pre></div>
+<p>就是不稳定。</p>
+<p>稳定性在多关键字排序中很有用：先按次关键字稳定排序，再按主关键字稳定排序，可以得到多关键字结果。</p>
+<h3 id="42-in-place">4.2 原地 In-place<a class="headerlink" href="#42-in-place" title="Permanent link">&para;</a></h3>
+<p>原地排序主要在输入数组内部重排，额外数组空间为 <code>O(1)</code>。递归栈通常单独报告。</p>
+<p>典型情况：</p>
+<ul>
+<li>插入、选择、冒泡、堆排序：可以原地；</li>
+<li>快速排序：数组分区本身原地，但递归栈仍占空间；</li>
+<li>归并排序、计数排序、基数排序：经典实现通常需要额外数组。</li>
+</ul>
+<h3 id="43">4.3 比较次数和移动次数<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>排序时间常拆成：</p>
+<ul>
+<li>关键字比较次数；</li>
+<li>数据移动、交换、复制次数。</li>
+</ul>
+<p>两个算法即使比较次数相近，移动成本也可能明显不同。</p>
+<hr />
+<h2 id="5">5. 简单排序算法<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51-insertion-sort">5.1 插入排序 Insertion Sort<a class="headerlink" href="#51-insertion-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_14">核心思想<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>维护一个已经有序的前缀，把当前元素插入到前缀中正确的位置。</p>
+<p>可以类比整理扑克牌：手里始终保持有序，每次从桌上拿一张牌，从右向左找位置。</p>
+<h4 id="_15">伪代码<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>INSERTION-SORT(A)
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>    for j = 2 to A.length
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>        key = A[j]
+<a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a>        i = j - 1
+<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>        while i &gt; 0 and A[i] &gt; key
+<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a>            A[i + 1] = A[i]
+<a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a>            i = i - 1
+<a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a>        A[i + 1] = key
+</code></pre></div>
+<h4 id="_16">正确性<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>循环不变量：每次外层循环开始时，<code>A[1..j-1]</code> 已经有序且包含原来的这些元素。当前迭代把 <code>key</code> 插入正确位置后，<code>A[1..j]</code> 有序，因此不变量保持。循环结束时，整个数组有序。</p>
+<h4 id="_17">复杂度<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>输入特征</th>
+<th style="text-align: right;">时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最好</td>
+<td>已经升序</td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+</tr>
+<tr>
+<td>平均</td>
+<td>随机排列</td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+</tr>
+<tr>
+<td>最坏</td>
+<td>逆序</td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>额外空间：<code>O(1)</code>；</li>
+<li>稳定：是；</li>
+<li>原地：是；</li>
+<li>适合：小数组、接近有序的数组、在线逐个插入数据。</li>
+</ul>
+<h4 id="_18">平均情况的理解<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>插入第 <code>j</code> 个元素时，它在已经排序的前 <code>j-1</code> 个位置中平均落在中间位置，因此平均移动/比较数量是 <code>Theta(j)</code>。总和为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>sum(j=2..n) Theta(j) = Theta(n^2)
+</code></pre></div>
+<h3 id="52-selection-sort">5.2 选择排序 Selection Sort<a class="headerlink" href="#52-selection-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_19">核心思想<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>每轮从未排序后缀中找最小值，与当前位置交换。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>SELECTION-SORT(A)
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>    for i = 1 to A.length - 1
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>        k = i
+<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>        for j = i + 1 to A.length
+<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a>            if A[j] &lt; A[k]
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a>                k = j
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a>        if k != i
+<a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>            swap A[i], A[k]
+</code></pre></div>
+<h4 id="_20">复杂度和特点<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>最好、平均、最坏：都是 <code>Theta(n^2)</code>；</li>
+<li>额外空间：<code>O(1)</code>；</li>
+<li>原地：是；</li>
+<li>默认不稳定；</li>
+<li>优点：交换次数少，最多 <code>O(n)</code> 次交换。</li>
+</ul>
+<h4 id="_21">如何改成稳定选择排序<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<p>不能直接把最小值与 <code>A[i]</code> 交换，因为最小值跨越移动时可能跳过相同键记录。稳定做法是：</p>
+<ol>
+<li>找到未排序区间的最小元素；</li>
+<li>把它取出；</li>
+<li>将它前面的元素整体向右移动一格；</li>
+<li>插入到区间开头。</li>
+</ol>
+<p>这样移动多，但保持了相等元素的相对顺序。</p>
+<h3 id="53-bubble-sort">5.3 冒泡排序 Bubble Sort<a class="headerlink" href="#53-bubble-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_22">核心思想<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<p>从后向前扫描，如果相邻元素逆序就交换，让较小元素逐步“冒”到前面。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>BUBBLE-SORT(A)
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>    for i = 1 to A.length - 1
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>        noSwap = TRUE
+<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>        for j = A.length - 1 downto i
+<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>            if A[j + 1] &lt; A[j]
+<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>                swap A[j], A[j + 1]
+<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>                noSwap = FALSE
+<a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>        if noSwap
+<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>            break
+</code></pre></div>
+<h4 id="_23">复杂度和特点<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>最好：<code>Theta(n)</code>，依赖提前终止；</li>
+<li>平均、最坏：<code>Theta(n^2)</code>；</li>
+<li>额外空间：<code>O(1)</code>；</li>
+<li>稳定：是；</li>
+<li>原地：是。</li>
+</ul>
+<h3 id="54-shellsort">5.4 希尔排序 Shellsort<a class="headerlink" href="#54-shellsort" title="Permanent link">&para;</a></h3>
+<h4 id="_24">核心思想<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<p>插入排序一次只能移动一格，逆序很远时效率低。希尔排序先选一个较大的间隔 <code>d</code>，对相距 <code>d</code> 的元素做分组插入排序，再逐步减小间隔，最后使用 <code>d=1</code> 的插入排序。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>SHELLSORT(A, gaps)
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>    for d in gaps from large to small
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>        perform insertion sort on every d-spaced subsequence
+</code></pre></div>
+<h4 id="_25">关键点<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li>复杂度强烈依赖间隔序列；</li>
+<li>原地：是；</li>
+<li>稳定：否；</li>
+<li>不能脱离 gap sequence 简单写一个统一复杂度。</li>
+</ul>
+<p>讲义中列举了多种间隔序列。应记住的不是所有公式，而是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>Shellsort 的性能由 gap sequence 决定。
+</code></pre></div>
+<p>某些经典序列可以达到优于 <code>Theta(n^2)</code> 的最坏界，使用形如 <code>2^p 3^q</code> 的序列时，讲义给出 <code>O(n log^2 n)</code> 的复杂度结论。作答时若题目没有指定间隔序列，写“依赖间隔序列”最稳妥。</p>
+<hr />
+<h2 id="6">6. 高效比较排序<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 堆的基本结构<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<p>堆是一个可以看成近似完全二叉树的数组对象。</p>
+<p>使用 1 下标时：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>PARENT(i) = floor(i/2)
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>LEFT(i)   = 2i
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>RIGHT(i)  = 2i + 1
+</code></pre></div>
+<h4 id="_26">最大堆<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<p>对每个非根节点：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>A[PARENT(i)] &gt;= A[i]
+</code></pre></div>
+<p>因此最大元素在根 <code>A[1]</code>。</p>
+<h4 id="_27">最小堆<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<p>对每个非根节点：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>A[PARENT(i)] &lt;= A[i]
+</code></pre></div>
+<p>最小元素在根。</p>
+<h3 id="62-max-heapify">6.2 MAX-HEAPIFY<a class="headerlink" href="#62-max-heapify" title="Permanent link">&para;</a></h3>
+<p>前提：节点 <code>i</code> 的左右子树已经是最大堆，只有 <code>i</code> 可能违反堆性质。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>MAX-HEAPIFY(A, i)
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>    l = LEFT(i)
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>    r = RIGHT(i)
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>    largest = i
+<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a>    if l &lt;= heap-size and A[l] &gt; A[largest]
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a>        largest = l
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a>    if r &lt;= heap-size and A[r] &gt; A[largest]
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a>        largest = r
+<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a>    if largest != i
+<a id="__codelineno-70-10" name="__codelineno-70-10" href="#__codelineno-70-10"></a>        swap A[i], A[largest]
+<a id="__codelineno-70-11" name="__codelineno-70-11" href="#__codelineno-70-11"></a>        MAX-HEAPIFY(A, largest)
+</code></pre></div>
+<p>每次递归只沿一条树高路径向下走，堆高为 <code>O(log n)</code>，所以：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>MAX-HEAPIFY = O(log n)
+</code></pre></div>
+<h3 id="63-build-max-heap">6.3 BUILD-MAX-HEAP<a class="headerlink" href="#63-build-max-heap" title="Permanent link">&para;</a></h3>
+<p>叶子节点天然是大小为 1 的堆，只需要从最后一个非叶子节点向前调整：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>BUILD-MAX-HEAP(A)
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>    heap-size = A.length
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a>    for i = floor(A.length/2) downto 1
+<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>        MAX-HEAPIFY(A, i)
+</code></pre></div>
+<p>容易误判为 <code>O(n log n)</code>，但精确分析是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>BUILD-MAX-HEAP = O(n)
+</code></pre></div>
+<p>原因：大量节点靠近底部，高度很小；只有少量节点高度较大，所有节点的 <code>height(i)</code> 总和是 <code>O(n)</code>。</p>
+<h3 id="64-heapsort">6.4 堆排序 Heapsort<a class="headerlink" href="#64-heapsort" title="Permanent link">&para;</a></h3>
+<h4 id="_28">核心思想<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<ol>
+<li>建最大堆；</li>
+<li>根部是当前最大值，把它与数组末尾交换；</li>
+<li>缩小堆的有效范围；</li>
+<li>对根做 <code>MAX-HEAPIFY</code>；</li>
+<li>重复。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>HEAPSORT(A)
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>    BUILD-MAX-HEAP(A)
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a>    for i = A.length downto 2
+<a id="__codelineno-74-4" name="__codelineno-74-4" href="#__codelineno-74-4"></a>        swap A[1], A[i]
+<a id="__codelineno-74-5" name="__codelineno-74-5" href="#__codelineno-74-5"></a>        heap-size = heap-size - 1
+<a id="__codelineno-74-6" name="__codelineno-74-6" href="#__codelineno-74-6"></a>        MAX-HEAPIFY(A, 1)
+</code></pre></div>
+<h4 id="_29">复杂度<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<ul>
+<li>建堆：<code>O(n)</code>；</li>
+<li>循环进行 <code>n-1</code> 次，每次调整 <code>O(log n)</code>；</li>
+<li>最好、平均、最坏：<code>Theta(n log n)</code>；</li>
+<li>原地：是；</li>
+<li>稳定：否；</li>
+<li>递归版调整的栈空间：<code>O(log n)</code>；迭代版可做到 <code>O(1)</code>。</li>
+</ul>
+<h4 id="_30">优先队列<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<p>最大堆还支持：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>作用</th>
+<th style="text-align: right;">复杂度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MAXIMUM</code></td>
+<td>返回最大元素</td>
+<td style="text-align: right;"><code>O(1)</code></td>
+</tr>
+<tr>
+<td><code>EXTRACT-MAX</code></td>
+<td>删除并返回最大元素</td>
+<td style="text-align: right;"><code>O(log n)</code></td>
+</tr>
+<tr>
+<td><code>INSERT</code></td>
+<td>插入元素并向上调整</td>
+<td style="text-align: right;"><code>O(log n)</code></td>
+</tr>
+<tr>
+<td><code>INCREASE-KEY</code></td>
+<td>增大键并向上调整</td>
+<td style="text-align: right;"><code>O(log n)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="65-quicksort">6.5 快速排序 Quicksort<a class="headerlink" href="#65-quicksort" title="Permanent link">&para;</a></h3>
+<h4 id="_31">核心思想<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<ol>
+<li>选一个 pivot；</li>
+<li><code>PARTITION</code> 把小于等于 pivot 的元素放左边，大于 pivot 的放右边；</li>
+<li>递归排序左右区间。</li>
+</ol>
+<h4 id="partition">PARTITION 的核心不变量<a class="headerlink" href="#partition" title="Permanent link">&para;</a></h4>
+<p>设 pivot 为 <code>x = A[r]</code>，维护下标 <code>i</code>，使得：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>A[p..i]       &lt;= x
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>A[i+1..j-1]   &gt; x
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a>A[j..r-1]     尚未处理
+<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a>A[r]          = x
+</code></pre></div>
+<p>扫描 <code>j</code>，遇到 <code>A[j] &lt;= x</code> 就增大 <code>i</code> 并交换 <code>A[i]</code> 与 <code>A[j]</code>，最后把 pivot 放到 <code>i+1</code>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>PARTITION(A, p, r)
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>    x = A[r]
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a>    i = p - 1
+<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a>    for j = p to r - 1
+<a id="__codelineno-76-5" name="__codelineno-76-5" href="#__codelineno-76-5"></a>        if A[j] &lt;= x
+<a id="__codelineno-76-6" name="__codelineno-76-6" href="#__codelineno-76-6"></a>            i = i + 1
+<a id="__codelineno-76-7" name="__codelineno-76-7" href="#__codelineno-76-7"></a>            swap A[i], A[j]
+<a id="__codelineno-76-8" name="__codelineno-76-8" href="#__codelineno-76-8"></a>    swap A[i + 1], A[r]
+<a id="__codelineno-76-9" name="__codelineno-76-9" href="#__codelineno-76-9"></a>    return i + 1
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>QUICKSORT(A, p, r)
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>    if p &lt; r
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a>        q = PARTITION(A, p, r)
+<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a>        QUICKSORT(A, p, q - 1)
+<a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a>        QUICKSORT(A, q + 1, r)
+</code></pre></div>
+<h4 id="_32">复杂度<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<p>每次 <code>PARTITION</code> 是 <code>Theta(n)</code>。</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>分割形状</th>
+<th style="text-align: right;">时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最好</td>
+<td>每次平分</td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+</tr>
+<tr>
+<td>平均/随机</td>
+<td>期望较平衡</td>
+<td style="text-align: right;"><code>Theta(n log n)</code> 期望</td>
+</tr>
+<tr>
+<td>最坏</td>
+<td>每次一个空区间和一个 <code>n-1</code> 区间</td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+</tr>
+</tbody>
+</table>
+<p>最坏递归式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>T(n) = T(n-1) + Theta(n) = Theta(n^2)
+</code></pre></div>
+<p>最好递归式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>T(n) = 2T(n/2) + Theta(n) = Theta(n log n)
+</code></pre></div>
+<h4 id="_33">随机化快速排序<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<p>随机选择 pivot 可以使任何固定输入上，分割形状具有随机性，期望运行时间为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>Theta(n log n)
+</code></pre></div>
+<p>但它仍然可能以极小概率连续选到极差 pivot，所以随机快速排序的最坏时间仍是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a>Theta(n^2)
+</code></pre></div>
+<h4 id="_34">特点<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
+<ul>
+<li>通常原地；</li>
+<li>不稳定；</li>
+<li>缓存表现通常较好；</li>
+<li>平均很快；</li>
+<li>如果必须保证最坏 <code>O(n log n)</code>，堆排序更稳。</li>
+</ul>
+<hr />
+<h2 id="7">7. 比较排序的下界<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 为什么比较排序不能普遍做到线性<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<p>比较排序只能通过比较元素大小来决定结果。它不利用键值的具体数值、位表示或分布。</p>
+<p>典型例子：插入排序、选择排序、冒泡排序、归并排序、堆排序、快速排序，都属于比较排序。</p>
+<h3 id="72">7.2 决策树模型<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<p>把比较排序抽象成一棵二叉决策树：</p>
+<ul>
+<li>每个内部节点是一次比较，例如 <code>a_i &lt; a_j</code>；</li>
+<li>左右分支对应比较结果；</li>
+<li>每个叶子对应一种最终排序结果。</li>
+</ul>
+<p>对于 <code>n</code> 个互异元素，输入可能有 <code>n!</code> 种排列。为了正确排序，每一种排列至少要到达一个可区分的叶子，因此叶子数 <code>l</code> 满足：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a>l &gt;= n!
+</code></pre></div>
+<p>若树高为 <code>h</code>，二叉树最多有 <code>2^h</code> 个叶子，所以：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>n! &lt;= l &lt;= 2^h
+</code></pre></div>
+<p>于是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a>h &gt;= log2(n!) = Omega(n log n)
+</code></pre></div>
+<p>因此得到结论：</p>
+<blockquote>
+<p><strong>任何比较排序算法，在最坏情况下都需要 <code>Omega(n log n)</code> 次比较。</strong></p>
+</blockquote>
+<p>这也解释了为什么归并排序、堆排序和快速排序的 <code>n log n</code> 是比较模型中的基本极限。</p>
+<h3 id="73">7.3 线性排序为什么不矛盾<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p>计数排序、基数排序、桶排序能在线性或期望线性时间工作，是因为它们不只比较元素：</p>
+<ul>
+<li>计数排序直接利用键值范围；</li>
+<li>基数排序利用数字或二进制位；</li>
+<li>桶排序利用输入分布假设。</li>
+</ul>
+<p>所以它们没有违反比较排序下界，而是换了计算模型或增加了输入假设。</p>
+<hr />
+<h2 id="8">8. 线性时间排序<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h3 id="81-counting-sort">8.1 计数排序 Counting Sort<a class="headerlink" href="#81-counting-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_35">适用条件<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<p>输入是 <code>n</code> 个整数，且每个整数落在较小范围：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>0 &lt;= A[j] &lt;= k
+</code></pre></div>
+<p>关键是 <code>k</code> 不能远大于 <code>n</code>。如果 <code>k</code> 极大，初始化和扫描计数数组的成本会很高。</p>
+<h4 id="_36">核心思想<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
+<ol>
+<li><code>C[x]</code> 统计值 <code>x</code> 出现次数；</li>
+<li>前缀和后，<code>C[x]</code> 表示小于等于 <code>x</code> 的元素数量；</li>
+<li>根据 <code>C[A[j]]</code> 把每个元素放到最终位置；</li>
+<li>每放一个相同值，就把对应计数减一。</li>
+</ol>
+<h4 id="_37">伪代码<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>COUNTING-SORT(A, B, k)
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a>    for i = 0 to k
+<a id="__codelineno-86-3" name="__codelineno-86-3" href="#__codelineno-86-3"></a>        C[i] = 0
+<a id="__codelineno-86-4" name="__codelineno-86-4" href="#__codelineno-86-4"></a>
+<a id="__codelineno-86-5" name="__codelineno-86-5" href="#__codelineno-86-5"></a>    for j = 1 to A.length
+<a id="__codelineno-86-6" name="__codelineno-86-6" href="#__codelineno-86-6"></a>        C[A[j]] = C[A[j]] + 1
+<a id="__codelineno-86-7" name="__codelineno-86-7" href="#__codelineno-86-7"></a>
+<a id="__codelineno-86-8" name="__codelineno-86-8" href="#__codelineno-86-8"></a>    for i = 1 to k
+<a id="__codelineno-86-9" name="__codelineno-86-9" href="#__codelineno-86-9"></a>        C[i] = C[i] + C[i - 1]
+<a id="__codelineno-86-10" name="__codelineno-86-10" href="#__codelineno-86-10"></a>
+<a id="__codelineno-86-11" name="__codelineno-86-11" href="#__codelineno-86-11"></a>    for j = A.length downto 1
+<a id="__codelineno-86-12" name="__codelineno-86-12" href="#__codelineno-86-12"></a>        B[C[A[j]]] = A[j]
+<a id="__codelineno-86-13" name="__codelineno-86-13" href="#__codelineno-86-13"></a>        C[A[j]] = C[A[j]] - 1
+</code></pre></div>
+<h4 id="_38">为什么必须从右向左放<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<p>从右向左处理，可以保证相同键的原相对顺序不变，因此计数排序稳定。稳定性是基数排序正确的关键。</p>
+<h4 id="_39">复杂度<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a>时间：Theta(n + k)
+<a id="__codelineno-87-2" name="__codelineno-87-2" href="#__codelineno-87-2"></a>空间：Theta(n + k)
+<a id="__codelineno-87-3" name="__codelineno-87-3" href="#__codelineno-87-3"></a>稳定：是
+<a id="__codelineno-87-4" name="__codelineno-87-4" href="#__codelineno-87-4"></a>经典实现：不是原地
+</code></pre></div>
+<h4 id="_40">小例子<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a>A = [2, 5, 3, 0, 2, 3, 0, 3]
+</code></pre></div>
+<p>计数后：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a>0 出现 2 次
+<a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a>2 出现 2 次
+<a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a>3 出现 3 次
+<a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a>5 出现 1 次
+</code></pre></div>
+<p>最终结果：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>[0, 0, 2, 2, 3, 3, 3, 5]
+</code></pre></div>
+<h3 id="82-radix-sort">8.2 基数排序 Radix Sort<a class="headerlink" href="#82-radix-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_41">核心思想<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<p>把每个键看成由 <code>d</code> 个数字组成，从最低位到最高位依次排序：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a>最低位 -&gt; 次低位 -&gt; ... -&gt; 最高位
+</code></pre></div>
+<p>这是 LSD radix sort。每一位使用<strong>稳定排序</strong>，通常使用计数排序。</p>
+<h4 id="_42">为什么内层排序必须稳定<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<p>当按当前位排序时，较高位已经处理好的相对顺序必须被保留。如果相同当前位的元素顺序被打乱，前面较低位的信息就会丢失。</p>
+<h4 id="_43">复杂度<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<p>若每个数字最多有 <code>k</code> 种取值：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a>每一位：Theta(n + k)
+<a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>总共 d 位：Theta(d(n + k))
+</code></pre></div>
+<p>若输入是 <code>b</code> 位二进制整数，每一轮处理 <code>r</code> 位，那么：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a>d = ceil(b/r)
+<a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a>k = 2^r
+<a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a>T(n) = Theta((b/r)(n + 2^r))
+</code></pre></div>
+<h4 id="_44">选择每轮处理多少位<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>r</code> 太小：轮数 <code>b/r</code> 太多；</li>
+<li><code>r</code> 太大：计数数组 <code>2^r</code> 太大；</li>
+<li>常见平衡选择是 <code>r</code> 接近 <code>log n</code>。</li>
+</ul>
+<p>当 <code>b = O(log n)</code> 且 <code>r</code> 接近 <code>log n</code> 时，基数排序可以达到 <code>Theta(n)</code>。</p>
+<h4 id="_45">特点<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<ul>
+<li>可以稳定；</li>
+<li>经典实现需要额外空间；</li>
+<li>速度依赖位数、基数和机器表示；</li>
+<li>不适用于任意对象，除非能定义可分解的数字键。</li>
+</ul>
+<h3 id="83-bucket-sort">8.3 桶排序 Bucket Sort<a class="headerlink" href="#83-bucket-sort" title="Permanent link">&para;</a></h3>
+<h4 id="_46">适用条件<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<p>输入来自 <code>[0, 1)</code> 上的均匀分布。</p>
+<h4 id="_47">核心思想<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<p>把 <code>[0,1)</code> 分成 <code>n</code> 个等宽桶：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>B[0], B[1], ..., B[n-1]
+</code></pre></div>
+<p>元素 <code>x</code> 放入：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a>B[floor(n*x)]
+</code></pre></div>
+<p>每个桶内部用插入排序，最后按桶编号依次连接。</p>
+<h4 id="_48">伪代码<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a>BUCKET-SORT(A)
+<a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a>    n = A.length
+<a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a>    let B[0..n-1] be empty lists
+<a id="__codelineno-96-4" name="__codelineno-96-4" href="#__codelineno-96-4"></a>    for i = 1 to n
+<a id="__codelineno-96-5" name="__codelineno-96-5" href="#__codelineno-96-5"></a>        insert A[i] into B[floor(n * A[i])]
+<a id="__codelineno-96-6" name="__codelineno-96-6" href="#__codelineno-96-6"></a>    for i = 0 to n - 1
+<a id="__codelineno-96-7" name="__codelineno-96-7" href="#__codelineno-96-7"></a>        sort B[i] with insertion sort
+<a id="__codelineno-96-8" name="__codelineno-96-8" href="#__codelineno-96-8"></a>    concatenate B[0], B[1], ..., B[n-1]
+</code></pre></div>
+<h4 id="_49">复杂度<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
+<p>设第 <code>i</code> 个桶中有 <code>n_i</code> 个元素，则桶内插入排序成本为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a>sum_i O(n_i^2)
+</code></pre></div>
+<p>若输入均匀分布，期望每个桶中的元素数量较小，且：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a>E[n_i^2] = 2 - 1/n
+</code></pre></div>
+<p>所以期望总时间：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a>Theta(n) + n * O(1) = Theta(n)
+</code></pre></div>
+<p>结论：</p>
+<ul>
+<li>期望时间：<code>Theta(n)</code>，需要均匀分布假设；</li>
+<li>最坏时间：<code>Theta(n^2)</code>，所有元素落入同一个桶时；</li>
+<li>额外空间：<code>Theta(n)</code>；</li>
+<li>若桶内用稳定排序，也可保持稳定性。</li>
+</ul>
+<h3 id="84">8.4 线性排序怎么选<a class="headerlink" href="#84" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>假设</th>
+<th style="text-align: right;">时间</th>
+<th style="text-align: right;">空间</th>
+<th style="text-align: right;">稳定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计数排序</td>
+<td>整数范围 <code>0..k</code> 较小</td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td style="text-align: right;">是</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>键可分成 <code>d</code> 位/数字</td>
+<td style="text-align: right;"><code>Theta(d(n+k))</code></td>
+<td style="text-align: right;">通常额外空间</td>
+<td style="text-align: right;">取决于内层排序</td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td>输入近似均匀分布</td>
+<td style="text-align: right;">期望 <code>Theta(n)</code></td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+<td style="text-align: right;">取决于桶内排序</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>无特殊输入假设</td>
+<td style="text-align: right;">期望 <code>Theta(n log n)</code></td>
+<td style="text-align: right;">原地加栈</td>
+<td style="text-align: right;">否</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>无特殊输入假设</td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>O(1)</code> 或栈</td>
+<td style="text-align: right;">否</td>
+</tr>
+</tbody>
+</table>
+<p>选择算法时不要只看理论阶数，还要看输入是否满足假设。</p>
+<hr />
+<h2 id="9">9. 顺序统计量与选择问题<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="91">9.1 定义<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<p>给定 <code>n</code> 个互异数字和整数 <code>i</code>，<code>1 &lt;= i &lt;= n</code>，第 <code>i</code> 个顺序统计量是排序后第 <code>i</code> 小的元素。</p>
+<p>特殊情况：</p>
+<ul>
+<li><code>i=1</code>：最小值；</li>
+<li><code>i=n</code>：最大值；</li>
+<li><code>i=ceil(n/2)</code>：中位数。</li>
+</ul>
+<p>选择问题只要求找到第 <code>i</code> 小元素，不需要把整个数组排序，因此可以突破排序的 <code>Omega(n log n)</code> 下界。</p>
+<h3 id="92">9.2 最小值和最大值<a class="headerlink" href="#92" title="Permanent link">&para;</a></h3>
+<p>找最小值至少需要 <code>n-1</code> 次比较，因为除第一个候选外，每个元素都需要至少参与一次比较。</p>
+<p>线性扫描：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>MINIMUM(A)
+<a id="__codelineno-100-2" name="__codelineno-100-2" href="#__codelineno-100-2"></a>    min = A[1]
+<a id="__codelineno-100-3" name="__codelineno-100-3" href="#__codelineno-100-3"></a>    for i = 2 to A.length
+<a id="__codelineno-100-4" name="__codelineno-100-4" href="#__codelineno-100-4"></a>        if A[i] &lt; min
+<a id="__codelineno-100-5" name="__codelineno-100-5" href="#__codelineno-100-5"></a>            min = A[i]
+<a id="__codelineno-100-6" name="__codelineno-100-6" href="#__codelineno-100-6"></a>    return min
+</code></pre></div>
+<p>时间：<code>Theta(n)</code>，比较次数：<code>n-1</code>。</p>
+<h3 id="93">9.3 同时找最小值和最大值<a class="headerlink" href="#93" title="Permanent link">&para;</a></h3>
+<p>朴素做法：分别找最小、最大，共 <code>2n-2</code> 次比较。</p>
+<p>更好做法：成对比较。</p>
+<ol>
+<li>先比较一对元素，较小者进入 min 候选，较大者进入 max 候选；</li>
+<li>对每一对，只需要再做一次与当前 min 或 max 的比较；</li>
+<li>每对总共 3 次比较。</li>
+</ol>
+<p>比较次数最多：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a>3 floor(n/2)
+</code></pre></div>
+<p>当 <code>n</code> 为偶数时还可以写成：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a>3n/2 - 2
+</code></pre></div>
+<h3 id="94-randomized-select">9.4 随机化选择 RANDOMIZED-SELECT<a class="headerlink" href="#94-randomized-select" title="Permanent link">&para;</a></h3>
+<h4 id="_50">核心思想<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
+<p>快速排序会递归处理 pivot 两侧，而选择算法只递归处理包含目标顺序统计量的那一侧。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a>RANDOMIZED-SELECT(A, p, r, i)
+<a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a>    if p == r
+<a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a>        return A[p]
+<a id="__codelineno-103-4" name="__codelineno-103-4" href="#__codelineno-103-4"></a>    q = RANDOMIZED-PARTITION(A, p, r)
+<a id="__codelineno-103-5" name="__codelineno-103-5" href="#__codelineno-103-5"></a>    k = q - p + 1
+<a id="__codelineno-103-6" name="__codelineno-103-6" href="#__codelineno-103-6"></a>    if i == k
+<a id="__codelineno-103-7" name="__codelineno-103-7" href="#__codelineno-103-7"></a>        return A[q]
+<a id="__codelineno-103-8" name="__codelineno-103-8" href="#__codelineno-103-8"></a>    if i &lt; k
+<a id="__codelineno-103-9" name="__codelineno-103-9" href="#__codelineno-103-9"></a>        return RANDOMIZED-SELECT(A, p, q - 1, i)
+<a id="__codelineno-103-10" name="__codelineno-103-10" href="#__codelineno-103-10"></a>    else
+<a id="__codelineno-103-11" name="__codelineno-103-11" href="#__codelineno-103-11"></a>        return RANDOMIZED-SELECT(A, q + 1, r, i - k)
+</code></pre></div>
+<h4 id="_51">为什么比快速排序快<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<p>快速排序必须解决左右两个子问题：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a>T_quick(n) = T(left) + T(right) + Theta(n)
+</code></pre></div>
+<p>选择只需要解决一个子问题：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>T_select(n) = T(较大一侧) + Theta(n)
+</code></pre></div>
+<h4 id="_52">复杂度<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h4>
+<ul>
+<li>最坏：<code>Theta(n^2)</code>，每次 pivot 都极差；</li>
+<li>期望：<code>Theta(n)</code>，随机 pivot 使平均递归规模快速下降。</li>
+</ul>
+<p>注意：期望线性不是每次运行都线性，而是对随机选择取平均。</p>
+<h3 id="95-median-of-medians">9.5 最坏线性选择：Median of Medians<a class="headerlink" href="#95-median-of-medians" title="Permanent link">&para;</a></h3>
+<p>目标：不依赖随机性，在最坏情况下也做到 <code>O(n)</code>。</p>
+<h4 id="_53">五分组算法<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<ol>
+<li>把 <code>n</code> 个元素分成若干组，每组 5 个，最后可能有不足 5 个的组；</li>
+<li>每组内部找中位数；</li>
+<li>递归找这些组中位数的中位数，记为 <code>x</code>；</li>
+<li>围绕 <code>x</code> 分区；</li>
+<li>根据目标排名 <code>i</code>，只递归进入一侧。</li>
+</ol>
+<h4 id="pivot">为什么 pivot 足够好<a class="headerlink" href="#pivot" title="Permanent link">&para;</a></h4>
+<p>至少一半的组中，有至少 3 个元素大于等于该组中位数；另至少一半的组中，有至少 3 个元素小于等于该组中位数。</p>
+<p>因此 pivot 两侧都能排除线性数量的元素。标准分析给出：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a>最大的递归子问题规模 &lt;= 7n/10 + 6
+</code></pre></div>
+<p>于是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a>T(n) &lt;= T(ceil(n/5)) + T(7n/10 + 6) + O(n)
+</code></pre></div>
+<p>假设 <code>T(n) &lt;= cn</code>，代入：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a>T(n)
+<a id="__codelineno-108-2" name="__codelineno-108-2" href="#__codelineno-108-2"></a>&lt;= c(n/5 + 1) + c(7n/10 + 6) + an
+<a id="__codelineno-108-3" name="__codelineno-108-3" href="#__codelineno-108-3"></a>= 9cn/10 + 7c + an
+</code></pre></div>
+<p>选择足够大的 <code>c</code> 后，右侧不超过 <code>cn</code>，因此：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a>T(n) = O(n)
+</code></pre></div>
+<h4 id="_54">重要结论<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<ul>
+<li>排序需要处理全部元素，所以比较模型下有 <code>Omega(n log n)</code> 下界；</li>
+<li>选择只需要确定一个排名，不需要完全排序；</li>
+<li>因此选择可以在最坏情况下做到 <code>O(n)</code>。</li>
+</ul>
+<hr />
+<h2 id="10">10. 一张总表：排序算法怎么比较<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<p>下表默认讨论经典实现，复杂度中的 <code>n</code> 是元素数量。</p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th style="text-align: right;">最好</th>
+<th style="text-align: right;">平均/期望</th>
+<th style="text-align: right;">最坏</th>
+<th style="text-align: right;">额外空间</th>
+<th>稳定</th>
+<th>原地</th>
+<th>关键特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>插入排序</td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>O(1)</code></td>
+<td>是</td>
+<td>是</td>
+<td>小规模、近乎有序</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>O(1)</code></td>
+<td>否</td>
+<td>是</td>
+<td>交换次数少</td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>O(1)</code></td>
+<td>是</td>
+<td>是</td>
+<td>可提前终止</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td style="text-align: right;">依 gap</td>
+<td style="text-align: right;">依 gap</td>
+<td style="text-align: right;">依 gap</td>
+<td style="text-align: right;"><code>O(1)</code></td>
+<td>否</td>
+<td>是</td>
+<td>分组插入</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+<td>是</td>
+<td>否</td>
+<td>稳定、适合外部排序</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>O(1)</code> 或栈</td>
+<td>否</td>
+<td>是</td>
+<td>最坏复杂度有保证</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td style="text-align: right;"><code>Theta(n log n)</code></td>
+<td style="text-align: right;">期望 <code>Theta(n log n)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;">平均栈 <code>O(log n)</code></td>
+<td>否</td>
+<td>通常是</td>
+<td>实际常快</td>
+</tr>
+<tr>
+<td>计数排序</td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td style="text-align: right;"><code>Theta(n+k)</code></td>
+<td>是</td>
+<td>否</td>
+<td>小整数范围</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td style="text-align: right;"><code>Theta(d(n+k))</code></td>
+<td style="text-align: right;">同</td>
+<td style="text-align: right;">同</td>
+<td style="text-align: right;">通常额外空间</td>
+<td>可稳定</td>
+<td>通常否</td>
+<td>分位排序</td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td style="text-align: right;">期望 <code>Theta(n)</code></td>
+<td style="text-align: right;">期望 <code>Theta(n)</code></td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>Theta(n)</code></td>
+<td>依桶内排序</td>
+<td>通常否</td>
+<td>均匀分布</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_55">快速选择口诀<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>优先考虑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小数组或接近有序</td>
+<td>插入排序</td>
+</tr>
+<tr>
+<td>需要稳定且无特殊键结构</td>
+<td>归并排序</td>
+</tr>
+<tr>
+<td>需要原地且最坏有保证</td>
+<td>堆排序</td>
+</tr>
+<tr>
+<td>平均性能、工程中常用</td>
+<td>快速排序或随机快速排序</td>
+</tr>
+<tr>
+<td>键是小范围整数</td>
+<td>计数排序</td>
+</tr>
+<tr>
+<td>键可拆成多位/数字</td>
+<td>基数排序</td>
+</tr>
+<tr>
+<td>输入在 <code>[0,1)</code> 近似均匀</td>
+<td>桶排序</td>
+</tr>
+<tr>
+<td>只求第 <code>i</code> 小</td>
+<td>选择算法，不要完整排序</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11_1">11. 复杂度分析的做题模板<a class="headerlink" href="#11_1" title="Permanent link">&para;</a></h2>
+<h3 id="111">11.1 循环题<a class="headerlink" href="#111" title="Permanent link">&para;</a></h3>
+<h4 id="_56">单层循环<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a>for i = 1 to n
+<a id="__codelineno-110-2" name="__codelineno-110-2" href="#__codelineno-110-2"></a>    O(1)
+</code></pre></div>
+<p>复杂度：<code>Theta(n)</code>。</p>
+<h4 id="_57">嵌套循环<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a>for i = 1 to n
+<a id="__codelineno-111-2" name="__codelineno-111-2" href="#__codelineno-111-2"></a>    for j = 1 to n
+<a id="__codelineno-111-3" name="__codelineno-111-3" href="#__codelineno-111-3"></a>        O(1)
+</code></pre></div>
+<p>复杂度：<code>Theta(n^2)</code>。</p>
+<p>但如果内层上界依赖 <code>i</code>：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a>for i = 1 to n
+<a id="__codelineno-112-2" name="__codelineno-112-2" href="#__codelineno-112-2"></a>    for j = 1 to i
+<a id="__codelineno-112-3" name="__codelineno-112-3" href="#__codelineno-112-3"></a>        O(1)
+</code></pre></div>
+<p>应写成求和：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a>sum(i=1..n) i = Theta(n^2)
+</code></pre></div>
+<h4 id="_58">每次翻倍或减半<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a>i = 1
+<a id="__codelineno-114-2" name="__codelineno-114-2" href="#__codelineno-114-2"></a>while i &lt;= n
+<a id="__codelineno-114-3" name="__codelineno-114-3" href="#__codelineno-114-3"></a>    i = 2i
+</code></pre></div>
+<p>循环次数是 <code>Theta(log n)</code>。</p>
+<h3 id="112">11.2 递归题<a class="headerlink" href="#112" title="Permanent link">&para;</a></h3>
+<p>按以下步骤：</p>
+<ol>
+<li>设 <code>T(n)</code> 表示规模为 <code>n</code> 的运行时间；</li>
+<li>写出递归调用数量和规模；</li>
+<li>写出当前层非递归成本；</li>
+<li>写出基例；</li>
+<li>先尝试 Master Theorem；</li>
+<li>不适用时用递归树或代入法。</li>
+</ol>
+<h3 id="113">11.3 正确性题<a class="headerlink" href="#113" title="Permanent link">&para;</a></h3>
+<p>按以下顺序：</p>
+<ol>
+<li>写清楚算法维护的性质；</li>
+<li>证明初始化；</li>
+<li>证明一次迭代后性质保持；</li>
+<li>说明终止时性质能推出答案；</li>
+<li>若是递归算法，说明递归子问题正确、合并正确。</li>
+</ol>
+<h3 id="114">11.4 选择排序算法题<a class="headerlink" href="#114" title="Permanent link">&para;</a></h3>
+<p>先问四个问题：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-115-1" name="__codelineno-115-1" href="#__codelineno-115-1"></a>输入值有没有特殊范围或分布？
+<a id="__codelineno-115-2" name="__codelineno-115-2" href="#__codelineno-115-2"></a>是否要求稳定？
+<a id="__codelineno-115-3" name="__codelineno-115-3" href="#__codelineno-115-3"></a>是否要求原地？
+<a id="__codelineno-115-4" name="__codelineno-115-4" href="#__codelineno-115-4"></a>是否必须保证最坏复杂度？
+</code></pre></div>
+<p>然后再比较复杂度。不要只看到“线性排序”就直接选，因为计数、基数、桶排序都有输入前提。</p>
+<hr />
+<h2 id="12-self-attention">12. 讲义中的应用型复杂度例子：Self-Attention<a class="headerlink" href="#12-self-attention" title="Permanent link">&para;</a></h2>
+<p>Topic 1 用自注意力说明算法复杂度不仅是“代码跑几层循环”，还要看中间结果的大小和存储。</p>
+<p>设：</p>
+<ul>
+<li>序列长度为 <code>n</code>；</li>
+<li>每个 token 的向量维度为 <code>d</code>；</li>
+<li><code>X</code> 的形状为 <code>n x d</code>。</li>
+</ul>
+<p>计算：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a>Q = X W_Q
+<a id="__codelineno-116-2" name="__codelineno-116-2" href="#__codelineno-116-2"></a>K = X W_K
+<a id="__codelineno-116-3" name="__codelineno-116-3" href="#__codelineno-116-3"></a>V = X W_V
+<a id="__codelineno-116-4" name="__codelineno-116-4" href="#__codelineno-116-4"></a>S = Q K^T / sqrt(d)
+<a id="__codelineno-116-5" name="__codelineno-116-5" href="#__codelineno-116-5"></a>A = row-softmax(S)
+<a id="__codelineno-116-6" name="__codelineno-116-6" href="#__codelineno-116-6"></a>Y = A V
+</code></pre></div>
+<p>其中：</p>
+<ul>
+<li><code>Q, K, V</code> 都是 <code>n x d</code>；</li>
+<li><code>S</code> 和 <code>A</code> 都是 <code>n x n</code>；</li>
+<li>每个 token 都与所有 token 交互。</li>
+</ul>
+<p>复杂度：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th style="text-align: right;">时间</th>
+<th style="text-align: right;">中间存储</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK^T</code></td>
+<td style="text-align: right;"><code>Theta(n^2 d)</code></td>
+<td style="text-align: right;"><code>n x n</code></td>
+</tr>
+<tr>
+<td>行 softmax</td>
+<td style="text-align: right;"><code>Theta(n^2)</code></td>
+<td style="text-align: right;"><code>n x n</code></td>
+</tr>
+<tr>
+<td><code>AV</code></td>
+<td style="text-align: right;"><code>Theta(n^2 d)</code></td>
+<td style="text-align: right;"><code>n x d</code></td>
+</tr>
+<tr>
+<td>线性投影</td>
+<td style="text-align: right;"><code>Theta(n d^2)</code></td>
+<td style="text-align: right;"><code>n x d</code></td>
+</tr>
+</tbody>
+</table>
+<p>核心结论：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>固定 d 时，全注意力核心的算术复杂度是 Theta(n^2 d)
+<a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a>注意力矩阵的存储是 Theta(n^2)
+</code></pre></div>
+<p>因此序列长度从 <code>n</code> 变为 <code>2n</code> 时，成对交互数量变为 4 倍；从 <code>n</code> 变为 <code>4n</code> 时变为 16 倍。</p>
+<p>如果只允许每个位置看宽度为 <code>w</code> 的窗口，成本降为：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a>Theta(n w d)
+</code></pre></div>
+<p>当 <code>w</code> 固定时，对 <code>n</code> 近似线性，但代价是失去直接的全局交互。这是“降低复杂度通常伴随建模能力或适用范围变化”的典型例子。</p>
+<hr />
+<h2 id="13_1">13. 高频易错点<a class="headerlink" href="#13_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-o">易错点 1：把 <code>O</code> 当成“等于"<a class="headerlink" href="#1-o" title="Permanent link">&para;</a></h3>
+<p><code>T(n)=O(n^2)</code> 只说明上界，不说明它一定是平方级。能证明紧确阶时写 <code>Theta</code>。</p>
+<h3 id="2">易错点 2：平均情况不等于把最好和最坏平均<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>平均情况必须基于明确的输入分布；随机算法的期望情况则通常对随机选择取期望。</p>
+<h3 id="3-build-heap-on-log-n">易错点 3：把 Build-Heap 误算成 <code>O(n log n)</code><a class="headerlink" href="#3-build-heap-on-log-n" title="Permanent link">&para;</a></h3>
+<p>逐个插入建堆可能是 <code>O(n log n)</code>，但从底向上执行 <code>BUILD-MAX-HEAP</code> 的标准算法是 <code>O(n)</code>。</p>
+<h3 id="4_1">易错点 4：基数排序的内层排序不一定随便<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>必须使用稳定排序，否则前面已经处理的低位信息会被破坏。</p>
+<h3 id="5_1">易错点 5：桶排序的线性时间不是无条件的<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
+<p>它依赖输入近似均匀分布。最坏情况下所有元素进入一个桶，内部插入排序退化到 <code>O(n^2)</code>。</p>
+<h3 id="6-n-log-n">易错点 6：快速排序平均 <code>n log n</code> 不代表最坏也是<a class="headerlink" href="#6-n-log-n" title="Permanent link">&para;</a></h3>
+<p>固定 pivot 可能在已排序输入上每次都极不平衡。随机化改善期望，不消除最坏可能。</p>
+<h3 id="7_1">易错点 7：选择问题不需要完整排序<a class="headerlink" href="#7_1" title="Permanent link">&para;</a></h3>
+<p>找中位数或第 <code>i</code> 小元素时，完整排序通常浪费工作。随机选择期望 <code>O(n)</code>，Median of Medians 最坏 <code>O(n)</code>。</p>
+<h3 id="8_1">易错点 8：稳定性不能只看是否交换<a class="headerlink" href="#8_1" title="Permanent link">&para;</a></h3>
+<p>选择排序的直接交换会跨越相等元素，因此通常不稳定；通过移动而非交换可以改成稳定版本。</p>
+<h3 id="9master-theorem">易错点 9：Master Theorem 不是所有递归式都能套<a class="headerlink" href="#9master-theorem" title="Permanent link">&para;</a></h3>
+<p>必须先检查是否是 <code>aT(n/b)+f(n)</code> 的标准形式，以及 <code>f(n)</code> 是否满足某一条增长关系和必要条件。</p>
+<h3 id="10_1">易错点 10：只写结论不写理由<a class="headerlink" href="#10_1" title="Permanent link">&para;</a></h3>
+<p>考试中复杂度结论通常要能追溯到：循环次数、每层成本、递归树高度、比较次数或输入假设。</p>
+<hr />
+<h2 id="14_1">14. 最后背诵清单<a class="headerlink" href="#14_1" title="Permanent link">&para;</a></h2>
+<h3 id="_59">必背定义<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>O</code>：上界；</li>
+<li><code>Omega</code>：下界；</li>
+<li><code>Theta</code>：紧确界；</li>
+<li>稳定排序；</li>
+<li>原地排序；</li>
+<li>最坏、平均、期望复杂度；</li>
+<li>顺序统计量。</li>
+</ul>
+<h3 id="_60">必背复杂度<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a>Insertion Sort: best Theta(n), worst Theta(n^2)
+<a id="__codelineno-119-2" name="__codelineno-119-2" href="#__codelineno-119-2"></a>Selection Sort: Theta(n^2)
+<a id="__codelineno-119-3" name="__codelineno-119-3" href="#__codelineno-119-3"></a>Bubble Sort: best Theta(n), worst Theta(n^2)
+<a id="__codelineno-119-4" name="__codelineno-119-4" href="#__codelineno-119-4"></a>Merge Sort: Theta(n log n)
+<a id="__codelineno-119-5" name="__codelineno-119-5" href="#__codelineno-119-5"></a>Build-Max-Heap: O(n)
+<a id="__codelineno-119-6" name="__codelineno-119-6" href="#__codelineno-119-6"></a>Heapify: O(log n)
+<a id="__codelineno-119-7" name="__codelineno-119-7" href="#__codelineno-119-7"></a>Heapsort: Theta(n log n)
+<a id="__codelineno-119-8" name="__codelineno-119-8" href="#__codelineno-119-8"></a>Quicksort: expected Theta(n log n), worst Theta(n^2)
+<a id="__codelineno-119-9" name="__codelineno-119-9" href="#__codelineno-119-9"></a>Counting Sort: Theta(n+k)
+<a id="__codelineno-119-10" name="__codelineno-119-10" href="#__codelineno-119-10"></a>Radix Sort: Theta(d(n+k))
+<a id="__codelineno-119-11" name="__codelineno-119-11" href="#__codelineno-119-11"></a>Bucket Sort: expected Theta(n), worst Theta(n^2)
+<a id="__codelineno-119-12" name="__codelineno-119-12" href="#__codelineno-119-12"></a>Randomized-Select: expected Theta(n), worst Theta(n^2)
+<a id="__codelineno-119-13" name="__codelineno-119-13" href="#__codelineno-119-13"></a>Median-of-Medians Select: worst O(n)
+</code></pre></div>
+<h3 id="_61">必背公式<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a>1 + 2 + ... + n = Theta(n^2)
+<a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a>1 + 1/2 + ... + 1/n = Theta(log n)
+<a id="__codelineno-120-3" name="__codelineno-120-3" href="#__codelineno-120-3"></a>T(n) = 2T(n/2) + Theta(n) = Theta(n log n)
+</code></pre></div>
+<h3 id="_62">必背证明套路<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a>循环算法：循环不变量 = 初始化 + 保持 + 终止
+<a id="__codelineno-121-2" name="__codelineno-121-2" href="#__codelineno-121-2"></a>递归算法：基例 + 递归子问题正确 + 合并正确
+<a id="__codelineno-121-3" name="__codelineno-121-3" href="#__codelineno-121-3"></a>复杂度：写 T(n) + 处理基例 + 解递归式
+<a id="__codelineno-121-4" name="__codelineno-121-4" href="#__codelineno-121-4"></a>比较排序下界：n! 个排列 + 二叉决策树 + n! &lt;= 2^h
+<a id="__codelineno-121-5" name="__codelineno-121-5" href="#__codelineno-121-5"></a>随机选择：每次只递归一侧，期望总成本线性
+<a id="__codelineno-121-6" name="__codelineno-121-6" href="#__codelineno-121-6"></a>最坏线性选择：五分组 + 中位数的中位数 + 丢掉常数比例元素
+</code></pre></div>
+<h3 id="_63">一句话理解整门课<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>先证明算法真的解决了问题，再用渐进分析判断它是否能扩展到大规模输入；当比较模型遇到下界时，就利用输入的数值范围、位结构、分布或“只求部分顺序”的特性换取更快算法。</strong></p>
+</blockquote>
+<hr />
+<h2 id="_64">附：资料对应关系<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>课程文件</th>
+<th>本笔记对应部分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Algorithm_2026_Topic_0.pdf</code></td>
+<td>课程目标、教材范围、算法分析视角</td>
+</tr>
+<tr>
+<td><code>Algorithm_2026_Topic_1.pdf</code></td>
+<td>第 1、3、5、6、12 节</td>
+</tr>
+<tr>
+<td><code>Algorithm_2026_Topic_2(1).pdf</code></td>
+<td>第 2、3、11 节</td>
+</tr>
+<tr>
+<td><code>Algorithm_2026_Topic_3.pdf</code></td>
+<td>第 4、5、6、10、13 节</td>
+</tr>
+<tr>
+<td><code>Algorithm_2026__Topic_4_1.pdf</code></td>
+<td>第 7、8、10、13 节</td>
+</tr>
+<tr>
+<td><code>Algorithm_2026__Topic_4_2.pdf</code></td>
+<td>第 9、10、13、14 节</td>
+</tr>
+<tr>
+<td><code>Introduction_to_algorithms_3rd_Edition.pdf</code></td>
+<td>用于补充正确性证明、归并排序、渐进分析、分治、堆、快速排序、线性排序和顺序统计量的标准表述</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../cs336/" class="md-footer__link md-footer__link--prev" aria-label="上一页: CS336 语言模型">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                CS336 语言模型
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../networking/" class="md-footer__link md-footer__link--next" aria-label="下一页: 计算机网络">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                计算机网络
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 王子涵 · 用 Material for MkDocs 构建
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
