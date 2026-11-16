@@ -1,16 +1,51 @@
+---
+title: 考试速通
+hide:
+  - toc
+---
+
 # 考试速通
 
-每门课一份，考前翻这一份就够。
+<div class="grid cards course-index" markdown>
 
-| 课程 | 学期 | 内容 | 入口 |
-|---|---|---|---|
-| 编译原理 | 2026 秋 | 15 篇：引论 → 词法 → 语法 → 中间代码 → 优化 → 总复习 | [编译原理](compiler/00-学习路线与课程地图.md) |
-| 计算机网络 | 2026 秋 | 前五章（Kurose 第 8 版），含计算模板与例题 | [计算机网络](networking.md) |
-| 算法基础 | 2026 秋 | Topic 0–4.2：复杂度、递归式、排序、顺序统计量 | [算法基础](algorithms.md) |
-| CS336 语言模型 | 2026 秋 | 分词 → 架构 → GPU → 并行 → scaling → 数据 → 对齐 | [CS336](cs336.md) |
+-   :material-code-braces:{ .lg .middle } **编译原理**
 
-## 用法
+    ---
 
-- 考前 1–2 天：看每页的「课程地图」和「一页速记」
-- 考前 2 小时：只看「公式与数字」「易错点」
-- 做题卡住：查「高频题型」的步骤模板
+    学习路线、13 章笔记与考前总复习。
+
+    词法分析 · 语法分析 · 中间代码 · 优化
+
+    [开始复习 :octicons-arrow-right-24:](compiler.md)
+
+-   :material-lan:{ .lg .middle } **计算机网络**
+
+    ---
+
+    Kurose 前五章，含计算模板与例题。
+
+    应用层 · 传输层 · 网络层
+
+    [开始复习 :octicons-arrow-right-24:](networking.md)
+
+-   :material-function-variant:{ .lg .middle } **算法基础**
+
+    ---
+
+    Topic 0–4.2。
+
+    复杂度 · 递归式 · 排序 · 顺序统计量
+
+    [开始复习 :octicons-arrow-right-24:](algorithms.md)
+
+-   :material-brain:{ .lg .middle } **CS336 语言模型**
+
+    ---
+
+    分词、模型架构、训练与对齐。
+
+    GPU · 并行训练 · Scaling · 数据与对齐
+
+    [开始复习 :octicons-arrow-right-24:](cs336.md)
+
+</div>

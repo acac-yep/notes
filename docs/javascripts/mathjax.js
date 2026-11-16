@@ -1,4 +1,4 @@
-# MathJax 配置：支持 $...$ 行内公式与 $$...$$ 独立公式
+// MathJax 配置：支持 $...$ 行内公式与 $$...$$ 独立公式
 window.MathJax = {
   tex: {
     inlineMath: [["$", "$"], ["\\(", "\\)"]],
@@ -11,10 +11,13 @@ window.MathJax = {
   }
 };
 
-// Matplotlib 一类的 Python 图形表达式写法也兼容
+// 初次加载由 MathJax 自己排版；后续页面切换时等待运行时就绪。
 document$.subscribe(() => {
-  MathJax.startup.output.clearCache();
-  MathJax.typesetClear();
-  MathJax.texReset();
-  MathJax.typesetPromise();
+  if (!window.MathJax.typesetPromise) return;
+  MathJax.startup.promise.then(() => {
+    MathJax.startup.output.clearCache();
+    MathJax.typesetClear();
+    MathJax.texReset();
+    return MathJax.typesetPromise();
+  }).catch((error) => console.error("MathJax page typesetting failed:", error));
 });
